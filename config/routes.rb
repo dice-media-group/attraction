@@ -1,6 +1,7 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  get 'blog/index'
   resources :posts
   namespace :admin do
     resources :users
