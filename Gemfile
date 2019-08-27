@@ -69,3 +69,6 @@ gem 'omniauth-twitter', '~> 1.4'
 gem 'sidekiq', '~> 5.2', '>= 5.2.5'
 gem 'sitemap_generator', '~> 6.0', '>= 6.0.1'
 gem 'whenever', require: false
+
+gem "aws-sdk-s3", require: false
+gem 'administrate-field-active_storage', '~> 0.1.8'

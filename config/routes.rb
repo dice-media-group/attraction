@@ -1,8 +1,10 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  get 'blog/index'
   resources :posts
   namespace :admin do
+    resources :posts
     resources :users
     resources :announcements
     resources :notifications
@@ -12,6 +14,10 @@ Rails.application.routes.draw do
   end
   get '/privacy', to: 'home#privacy'
   get '/terms', to: 'home#terms'
+  get '/work', to: 'home#work'
+  get '/about', to: 'home#about'
+  get '/contact', to: 'home#contact'
+  get '/careers', to: 'home#careers'
     authenticate :user, lambda { |u| u.admin? } do
       mount Sidekiq::Web => '/sidekiq'
     end

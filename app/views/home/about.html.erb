@@ -1,0 +1,45 @@
+<style>
+	@media (max-width: 500px) {
+		.promos {
+			display: grid;
+			grid-gap: 1rem;
+		}
+	}
+	 @media (min-width: 700px) {
+		.promos {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			grid-template-rows: minmax(30vh, 1fr);
+			grid-gap: 1rem;
+			grid-template-areas: 	"main main"
+									"second third";
+		}
+		.promo:first-child {
+			grid-area: main;
+			background-color: green;
+		}
+		.promo:nth-child(2) {
+			grid-area: second;
+			background-color: blue;
+		}
+		.promo:nth-child(3) {
+			grid-area: third;
+			background-color: orange;
+		}
+
+	 }
+</style>
+
+<section class="promos">
+	<div class="promo">
+	    <div class="item">FIRST</div>
+	</div>
+	<div class="promo">
+	    <div class="item">SECOND</div>
+	</div>
+	<div class="promo">
+	    <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil veniam fugiat facere iusto odio sed. Repudiandae molestiae fugit velit, error laborum ipsum, alias facilis possimus aliquid vitae quod. Recusandae in dicta mollitia molestias, quas iure ipsum perferendis nihil dignissimos a voluptatibus delectus, excepturi aliquam ducimus inventore repudiandae, consectetur ex asperiores molestiae quae aperiam nam. Omnis molestiae nesciunt eos ipsa praesentium libero debitis. Autem alias itaque architecto exercitationem quo sequi magni velit mollitia debitis nisi est enim, harum omnis molestiae labore assumenda at sed totam consequatur quaerat ratione deserunt facere dicta quasi natus. Blanditiis saepe adipisci nobis, vel excepturi quae. Ea perspiciatis delectus fuga blanditiis dicta rerum asperiores laudantium, consectetur accusantium numquam.</div>
+	</div>
+
+
+</section>
