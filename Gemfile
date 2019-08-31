@@ -63,12 +63,16 @@ gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem 'mini_magick', '~> 4.9', '>= 4.9.2'
 gem 'name_of_person', '~> 1.1'
-# gem 'omniauth-facebook', '~> 5.0'
-# gem 'omniauth-github', '~> 1.3'
-# gem 'omniauth-twitter', '~> 1.4'
+## omniauth vulnerability https://github.com/dice-media-group/attraction/network/alert/Gemfile.lock/omniauth/open
+## trying out gem 'omniauth-rails_csrf_protection', '~> 0.1.2' to fix it
+gem 'omniauth-facebook', '~> 5.0'
+gem 'omniauth-github', '~> 1.3'
+gem 'omniauth-twitter', '~> 1.4'
 gem 'sidekiq', '~> 5.2', '>= 5.2.5'
 gem 'sitemap_generator', '~> 6.0', '>= 6.0.1'
 gem 'whenever', require: false
 
+## app-specific
+gem 'omniauth-rails_csrf_protection', '~> 0.1.2'
 gem "aws-sdk-s3", require: false
 gem 'administrate-field-active_storage', '~> 0.1.8'
