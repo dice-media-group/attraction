@@ -1,0 +1,30 @@
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script>
+    var Webflow = Webflow || [];
+    Webflow.push(function () {
+      // DOMready has fired
+      // May now use jQuery and Webflow api
+// start everything
+      var tabTimeout;
+      clearTimeout(tabTimeout);
+      tabLoop();
+    // define loop - cycle through all tabs
+    function tabLoop() {
+        tabTimeout = setTimeout(function() {
+            var $next = $('.c-tabslider1__tab-menu').children('.w--current:first').next();
+            if($next.length) {
+                $next.click();  // click resets timeout, so no need for interval
+            } else {
+                $('.c-tabslider1__tab-link:first').click();
+            }
+        }, 3500);  // 2 second tab loop
+    }
+    // reset timeout if a tab is clicked
+    $('.c-tabslider1__tab-link').click(function() {
+        clearTimeout(tabTimeout);
+        tabLoop();
+        });
+    });
+</script>

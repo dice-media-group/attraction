@@ -36,55 +36,9 @@
           </a>
         </div>
       </div>
-      <div class="col lg-8 md-12">
-        <div data-duration-out="100" data-easing="ease-in-out-sine" data-duration-in="400" class="c-tabslider1 w-tabs">
-          <div class="c-tabslider1__tab-content w-tab-content">
-            <div data-w-tab="Tab 2" class="tabpane2 w-tab-pane" style="">
-              <div style="opacity: 0; transform: translate3d(0px, 30px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;" class="pane2">
-                <div class="col lg-12 no-margin-bottom hero-img">
-  
-                  <%= image_tag "slice4.svg", class: "bg-color color1" %>
-                </div>
-              </div>
-            </div>
-            <div data-w-tab="Tab 1" class="tabpane1 w-tab-pane w--tab-active" style="opacity: 1; transition: opacity 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;">
-              <div style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;" class="pane1">
-                <div class="col lg-12 no-margin-bottom hero-img">
-                  <%= image_tag "slice1_1.svg", class: "bg-color color1" %>
-                </div>
-              </div>
-            </div>
-            <div data-w-tab="Tab 3" class="tabpane3 w-tab-pane" style="">
-              <div style="opacity: 0; transform: translate3d(0px, 30px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;" class="pane3">
-                <div class="col lg-12 no-margin-bottom">
-                  <%= image_tag "slice3.svg", class: "bg-color color1" %>
-                </div>
-              </div>
-            </div>
-            <div data-w-tab="Tab 4" class="tabpane4 w-tab-pane" style="">
-              <div style="opacity: 0; transform: translate3d(0px, 30px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;" class="pane4">
-                <div class="col lg-12 no-margin-bottom">
-                  <%= image_tag "slice2.svg", class: "bg-color color1" %>
-              </div>
-            </div>
-          </div>
-          <div class="c-tabslider1__tab-menu w-tab-menu">
-            <a data-w-tab="Tab 2" data-w-id="5478bb87-5598-6828-1ba8-6bc578acd617" class="c-tabslider1__tab-link w-inline-block w-tab-link">
-              <div>Content curation</div>
-            </a>
-            <a data-w-tab="Tab 1" data-w-id="5478bb87-5598-6828-1ba8-6bc578acd614" class="c-tabslider1__tab-link w-inline-block w-tab-link w--current">
-              <div>Scheduling</div>
-            </a>
-            <a data-w-tab="Tab 3" data-w-id="5478bb87-5598-6828-1ba8-6bc578acd61a" class="c-tabslider1__tab-link w-inline-block w-tab-link">
-              <div>Social Analytic</div>
-            </a>
-            <a data-w-tab="Tab 4" data-w-id="5478bb87-5598-6828-1ba8-6bc578acd61d" class="c-tabslider1__tab-link w-inline-block w-tab-link">
-              <div>Monitoring</div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+      <%= render partial: 'tabslider' %>
+
+F    </div>
     <div class="block-decoration"></div>
   </div>
   <div class="section position-relative no-padding-top">
@@ -457,7 +411,7 @@
           <h3 class="margin-bottom-small">5 Bad Habits of Absolutely Ineffective Technology Managers</h3>
           <div class="low-text-contrast text-small basis-250px text-align-right">10 June 2019</div>
         </div>
-        <div class="margin-bottom">Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</div><a href="#" class="cta-link text-align-center">Read more<span class="fa margin-left-small"></span></a></div>
+        <div class="margin-bottom">Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</div><a href="#" class="cta-link text-align-center">Read more<span class="fa margin-left-small"></span></a></div>
       <div class="col lg-6 md-12">
                 <%#= image_tag("cement-arrow.jpg", 
                   srcset: { "cement-arrow-p-500.jpg" => "500w", 
@@ -536,34 +490,4 @@
       </div>
     </div>
   </div>
-  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
-  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-  <script>
-    var Webflow = Webflow || [];
-    Webflow.push(function () {
-      // DOMready has fired
-      // May now use jQuery and Webflow api
-// start everything
-      var tabTimeout;
-      clearTimeout(tabTimeout);
-      tabLoop();
-    // define loop - cycle through all tabs
-    function tabLoop() {
-        tabTimeout = setTimeout(function() {
-            var $next = $('.c-tabslider1__tab-menu').children('.w--current:first').next();
-            if($next.length) {
-                $next.click();  // click resets timeout, so no need for interval
-            } else {
-                $('.c-tabslider1__tab-link:first').click();
-            }
-        }, 3500);  // 2 second tab loop
-    }
-    // reset timeout if a tab is clicked
-    $('.c-tabslider1__tab-link').click(function() {
-        clearTimeout(tabTimeout);
-        tabLoop();
-        });
-    });
-</script>
 
