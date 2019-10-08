@@ -1,70 +1,567 @@
-<h1>Let’s build something that your audience will love.</h1>
 
-	
-<style>
-	.promos {
-		display: grid;
-		grid-template-columns: 2fr 1fr 1fr;
-		grid-template-rows: minmax(30vh, 1fr);
-		grid-gap: 1rem;
-		grid-template-areas: 	"main second second"
-								"main third  fourth";
-	}
-	.promo:first-child {
-		grid-area: main;
-		background-color: green;
-		.item {
-			background-color: purple;
-		}
-	}
-	.promo:nth-child(2) {
-		grid-area: second;
-		background-color: blue;
-	}
-	.promo:nth-child(3) {
-		grid-area: third;
-		background-color: orange;
-	}
-	.promo:nth-child(4) {
-		grid-area: fourth;
-		background-color: black;
-	}
-</style>
+  <div class="section-header position-absolute">
+    <div class="container space-between align-middle">
+      <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
+        <div class="navbar-container align-middle w-container">
+          <div class="col lg-4 order-first no-padding-left no-margin-bottom flex-horizontal position-absolute-md">
+            <nav role="navigation" class="nav-menu w-nav-menu"><a href="about-us.html" class="no-padding-left nav-link w-nav-link" style="max-width: 100%;">About</a><a href="pricing.html" class="nav-link w-nav-link" style="max-width: 100%;">Pricing</a><a href="blog.html" class="nav-link w-nav-link" style="max-width: 100%;">Blog</a><a href="contact.html" class="nav-link w-nav-link" style="max-width: 100%;">Contact</a></nav>
+          </div>
+          <div class="col lg-4 no-margin-bottom flexh-justify-center col-logo no-padding-left md-3">
+            <a href="index.html" class="brand w-nav-brand w--current">
+              <%= image_tag "dark-zain.svg", class: "logo-image", width: "64" %>
+            </a>
+          </div>
+          <div class="col lg-4 no-margin-bottom flexh-justify-end no-padding-right hidden-xs md-8">
+            <a href="form-2.html" class="button-primary button-primary-small order-last w-inline-block">
+              <div class="button-primary-text">sign up</div>
+            </a>
+            <div class="extra-menu"><a href="form-3.html" class="extra-menu-link margin-left nav-link">Sign in</a></div>
+          </div>
+          <div class="menu-button w-nav-button">
+            <%= image_tag "burger-menu-icon-1.svg", class: "burger-menu-icon", width: "22" %>
+          </div>
+        </div>
+      <div class="w-nav-overlay" data-wf-ignore=""></div></div>
+    </div>
+  </div>
+  <div class="section section-w-absolute-navbar">
+    <div class="container flex-horizontal">
+      <div class="col lg-4 md-12 shift-down-double flexv-space-between">
+        <div class="margin-bottom">
+          <div class="pre-title">Social management redefined</div>
+          <h1>The smarter way to plan social media</h1>
+          <p class="margin-bottom text-large">Content publishing can be overwhelming — simplify your workflow with Zain</p>
+          <a href="#" class="button-primary w-inline-block">
+            <div class="button-primary-text">start using zain now</div>
+          </a>
+        </div>
+      </div>
+      <div class="col lg-8 md-12">
+        <div data-duration-out="100" data-easing="ease-in-out-sine" data-duration-in="400" class="c-tabslider1 w-tabs">
+          <div class="c-tabslider1__tab-content w-tab-content">
+            <div data-w-tab="Tab 2" class="tabpane2 w-tab-pane" style="">
+              <div style="opacity: 0; transform: translate3d(0px, 30px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;" class="pane2">
+                <div class="col lg-12 no-margin-bottom hero-img">
+  
+                  <%= image_tag "slice4.svg", class: "bg-color color1" %>
+                </div>
+              </div>
+            </div>
+            <div data-w-tab="Tab 1" class="tabpane1 w-tab-pane w--tab-active" style="opacity: 1; transition: opacity 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;">
+              <div style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;" class="pane1">
+                <div class="col lg-12 no-margin-bottom hero-img">
+                  <%= image_tag "slice1_1.svg", class: "bg-color color1" %>
+                </div>
+              </div>
+            </div>
+            <div data-w-tab="Tab 3" class="tabpane3 w-tab-pane" style="">
+              <div style="opacity: 0; transform: translate3d(0px, 30px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;" class="pane3">
+                <div class="col lg-12 no-margin-bottom">
+                  <%= image_tag "slice3.svg", class: "bg-color color1" %>
+                </div>
+              </div>
+            </div>
+            <div data-w-tab="Tab 4" class="tabpane4 w-tab-pane" style="">
+              <div style="opacity: 0; transform: translate3d(0px, 30px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;" class="pane4">
+                <div class="col lg-12 no-margin-bottom">
+                  <%= image_tag "slice2.svg", class: "bg-color color1" %>
+              </div>
+            </div>
+          </div>
+          <div class="c-tabslider1__tab-menu w-tab-menu">
+            <a data-w-tab="Tab 2" data-w-id="5478bb87-5598-6828-1ba8-6bc578acd617" class="c-tabslider1__tab-link w-inline-block w-tab-link">
+              <div>Content curation</div>
+            </a>
+            <a data-w-tab="Tab 1" data-w-id="5478bb87-5598-6828-1ba8-6bc578acd614" class="c-tabslider1__tab-link w-inline-block w-tab-link w--current">
+              <div>Scheduling</div>
+            </a>
+            <a data-w-tab="Tab 3" data-w-id="5478bb87-5598-6828-1ba8-6bc578acd61a" class="c-tabslider1__tab-link w-inline-block w-tab-link">
+              <div>Social Analytic</div>
+            </a>
+            <a data-w-tab="Tab 4" data-w-id="5478bb87-5598-6828-1ba8-6bc578acd61d" class="c-tabslider1__tab-link w-inline-block w-tab-link">
+              <div>Monitoring</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block-decoration"></div>
+  </div>
+  <div class="section position-relative no-padding-top">
+    <div class="container flex-horizontal">
+      <div class="col lg-4 md-12 margin-top-triple">
+        <div class="c-iconbox color1">
+          <div class="flexh-align-center margin-bottom">
+            <%= image_tag("team.svg", class: "margin-right basis-128", width: "64") %>
+            <h4 class="no-margin-bottom grow">Real time collaboration</h4>
+          </div>
+          <div class="margin-bottom">Keep your social presence active 24/7 by automatically scheduling hundreds of social media posts at once.</div><a href="#" class="cta-link text-align-center on-dark">Learn more<span class="fa margin-left-small"></span></a></div>
+      </div>
+      <div class="col lg-4 md-12 margin-top-double">
+        <div class="c-iconbox color2">
+          <div class="flexh-align-center margin-bottom">
+            <%= image_tag("ipad.svg", class: "margin-right basis-128", width: "64") %>
+            <h4 class="no-margin-bottom grow">iPad &amp; Pencil full compatible</h4>
+          </div>
+          <div class="margin-bottom">Stay on message with pre-approved content your teams can post, stored in your favorite cloud file service.</div><a href="#" class="cta-link text-align-center on-dark">Learn more<span class="fa margin-left-small"></span></a></div>
+      </div>
+      <div class="col lg-4 md-12">
+        <div class="c-iconbox color3">
+          <div class="flexh-align-center margin-bottom">
+            <%= image_tag("user.svg", class: "margin-right basis-128", width: "64") %>
+            <h4 class="no-margin-bottom grow">User centric journey funnel</h4>
+          </div>
+          <div class="margin-bottom">Track your performance and share meaningful insights with your team about customers and campaign with your team.</div><a href="#" class="cta-link text-align-center on-dark">Learn more<span class="fa margin-left-small"></span></a></div>
+      </div>
+    </div>
+    <div class="bg-decor7"></div>
+  </div>
+  <div class="section bg-accent position-relative overflow-hidden">
+    <div class="container">
+      <div class="col lg-12">
+        <div class="w-layout-grid c-grid6x1">
+          <div id="w-node-c60bc034bd07-f4a4f50a" class="size-h4">100,000 brands are already using Zain to improve their social management</div>
+            <%= image_tag("aviato.svg") %>
+            <%= image_tag("hooli.svg") %>
+            <%= image_tag("angrycreative.svg") %>
+            <%= image_tag("d-and-d-beyond.svg") %>
+            </div>
+      </div>
+    </div>
+    <%= image_tag("graphic4.svg", 
+        data: { w_id: '5594f39e-8dc6-ebe3-dcc1-2f175dfad415' },
+        class: "bg-decor6 img3",
+        style: "will-change: transform; 
+              transform: translate3d(0px, 200%, 0px) 
+                scale3d(1, 1, 1) 
+                rotateX(0deg) 
+                rotateY(0deg) 
+                rotateZ(0deg) 
+                skew(0deg); 
+                transform-style: preserve-3d;"
+    ) %>
+    <%= image_tag("graphic8.svg", 
+        data: { w_id: 'e9b6fe4e-9e1f-3fd5-01c5-08fce669b898' },
+        class: "bg-decor6",
+        style: "will-change: transform;
+                transform: translate3d(0px, 30%, 0px) 
+                  scale3d(1, 1, 1) 
+                  rotateX(0deg) 
+                  rotateY(0deg) 
+                  rotateZ(0deg) 
+                  skew(0deg); 
+                transform-style: preserve-3d;"
+    ) %>
+    <%= image_tag("graphic7.svg", 
+        data: { w_id: 'c179610b-36a3-451a-c5af-366261be2dd1' },
+        class: "bg-decor6 img4",
+        style: "will-change: transform; 
+          transform: translate3d(0px, 30%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"
+    ) %>
 
-<section class="promos">
-	<div class="promo">
-	    <div class="item">
-	    	
-			<div style="padding: 60px">
-					<%= render partial: 'logo' %>
-				<p >Dice Media Group is the Salt Lake based web design company specializing in custom web design and development, e-commerce websites, email newsletter design, campaign implementation and brand &amp; identity design.</p>
-			</div>
-	
-	    </div>
-	</div>
-	<div class="promo">
-	    <div class="item">
-			<p>
-			    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat natus error cumque minus officia quae! Nostrum repellendus ducimus, qui itaque assumenda modi eaque rerum fugit optio consequatur aut illum alias amet consequuntur odio distinctio laborum omnis expedita ipsa repudiandae eveniet magni laudantium voluptatibus. Odit!
-			</p>
-	
-	    </div>
-	</div>
-	<div class="promo">
-	    <div class="item">
-	    	  <i class="fas fa-file-code fa-10x"></i>
-	    </div>
-	    <div class="item">
-	    	  <p>Build</p>
-	    </div>
-	</div>
-	<div class="promo">
-	    <div class="item">
-	    	  <i class="fas fa-bullhorn  fa-10x"></i>	    	
-	    </div>
-	    <div class="item">
-	    	  <p>Promote</p>
-	    </div>
-	</div>
-</section>
-    
+    <%= image_tag("graphic11.svg", 
+        data: { w_id: '9a1e3292-8f2e-aff2-d326-48aa5b4077ce' },
+        class: "bg-decor6 img2",
+        style: "will-change: transform; 
+          transform: translate3d(0px, 90%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"
+    ) %>
+
+
+  </div>
+  <div class="section no-padding-bottom position-relative">
+    <div class="container">
+      <div class="col lg-5 md-12 md-order-last">
+        <div class="pre-title">Engage on social with confidence</div>
+        <h2 class="margin-bottom">Manage social teams efficiently and securely</h2>
+        <div class="margin-bottom">Our powerful team management features let you engage on social media with confidence.<br>‍<br><strong>Collaborate effectively with these flexible features</strong></div>
+        <ul class="c-checklist margin-bottom">
+          <li class="c-checklist_item">Safeguard your social media presence</li>
+          <li class="c-checklist_item">Set custom permission levels</li>
+          <li class="c-checklist_item">Manage tasks and assignments</li>
+          <li class="c-checklist_item">Work together efficiently</li>
+          <li class="c-checklist_item">Monitor all your messages</li>
+          <li class="c-checklist_item">Get everyone on the same page</li>
+          <li class="c-checklist_item">Maintain secure permission</li>
+        </ul>
+        <div class="flexh-align-center wrap-xs">
+          <a href="#" class="button-primary basis-400 margin-bottom-small w-inline-block w-lightbox">
+            <div class="button-primary-text text-align-center">Watch video <span class="fa margin-left-small"></span></div>
+            <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "type": "video",
+      "originalUrl": "https://www.youtube.com/watch?v=A3bfvxDEgn0?autoplay=1",
+      "url": "https://www.youtube.com/watch?v=A3bfvxDEgn0?autoplay=1",
+      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FA3bfvxDEgn0%3Fautoplay%3D1%26feature%3Doembed&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DA3bfvxDEgn0&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FA3bfvxDEgn0%2Fhqdefault.jpg&args=autoplay%3D1&key=96f1f04c5f4143bcb0f2e68c87d65feb&autoplay=1&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
+      "thumbnailUrl": "https://i.ytimg.com/vi/A3bfvxDEgn0/hqdefault.jpg",
+      "width": 940,
+      "height": 528
+    }
+  ]
+}</script>
+          </a>
+          <div class="margin-left text-small">The video explains how our app save time. <a href="#">Learn More</a></div>
+        </div>
+      </div>
+      <div class="col order-first lg-7 md-12 no-margin-bottom md-margin-bottom"><a href="#" class="margin-right-small position-relative w-inline-block w-lightbox">
+        <%= image_tag("slice6.svg",  width: "500") %>
+        <div class="play-button">
+          <span class="play-icon"></span></div><script type="application/json" class="w-json">{
+  "items": [
+    {
+      "type": "video",
+      "originalUrl": "https://www.youtube.com/watch?v=A3bfvxDEgn0?autoplay=1",
+      "url": "https://www.youtube.com/watch?v=A3bfvxDEgn0?autoplay=1",
+      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FA3bfvxDEgn0%3Fautoplay%3D1%26feature%3Doembed&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DA3bfvxDEgn0&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FA3bfvxDEgn0%2Fhqdefault.jpg&args=autoplay%3D1&key=96f1f04c5f4143bcb0f2e68c87d65feb&autoplay=1&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
+      "thumbnailUrl": "https://i.ytimg.com/vi/A3bfvxDEgn0/hqdefault.jpg",
+      "width": 940,
+      "height": 528
+    }
+  ]
+}</script></a></div>
+    </div>
+    <%= image_tag("memphis1.svg", class:  "bg-decor1")  %>
+  </div>
+  <div class="section no-padding-trbl margin-top-negative">
+    <div data-animation="slide" data-hide-arrows="1" data-duration="500" data-infinite="1" class="c-carousel3 margin-bottom-double w-slider">
+      <div class="c-carousel3__wrapper w-slider-mask"><div data-w-id="f801b824-a9f9-08da-93b8-3868019969a0" class="w-slide" style="transform: translateX(0px); opacity: 1;">
+          <div class="c-carousel3__content">
+            <%= image_tag("Stepped-Area-Chart.png", 
+                srcset: {"Stepped-Area-Chart-p-500.png" => "500w", "Stepped-Area-Chart-p-800.png" => "800w", "Stepped-Area-Chart.png" => "1050w"}, 
+
+                sizes:  "(max-width: 767px) 100vw, 90vw" ,
+                style: "opacity: 1;",
+                class: "c-carousel3_image",
+                width: "1000"
+            ) %>
+
+            <div style="opacity: 1;" class="text-medium text-align-center margin-bottom">
+              Social balance graph monitor
+            </div>
+          </div>
+        </div>
+        <div data-w-id="f801b824-a9f9-08da-93b8-3868019969a3" class="w-slide" style="transform: translateX(0px); opacity: 1;">
+          <div class="c-carousel3__content">
+            <%= image_tag("Stream-Area-Chart.png", 
+                srcset: {"Stream-Area-Chart-p-500.png" => "500w", "Stream-Area-Chart-p-800.png" => "800w", "Stream-Area-Chart.png" => "1050w"}, 
+
+                sizes:  "(max-width: 767px) 100vw, 90vw",
+                style: "opacity: 0.5;",
+                class: "c-carousel3_image",
+                width: "1000"
+            ) %>            
+            <div style="opacity: 0.5;" class="text-medium text-align-center margin-bottom">User retention statistics</div>
+          </div>
+        </div><div data-w-id="f801b824-a9f9-08da-93b8-3868019969a6" class="w-slide" style="transform: translateX(0px); opacity: 1;">
+          <div class="c-carousel3__content">
+            <%= image_tag("100-Percent-Stacked-Bar-Chart.png", 
+                srcset: {"100-Percent-Stacked-Bar-Chart-p-500.png" => "500w", 
+                "100-Percent-Stacked-Bar-Chart-p-800.png" => "800w", 
+                "100-Percent-Stacked-Bar-Chart.png" => "1051w"}, 
+
+                sizes:  "(max-width: 767px) 100vw, 90vw",
+                style: "opacity: 0.5;",
+                class: "c-carousel3_image",
+                width: "1000"
+            ) %>            
+            <div style="opacity: 0.5;" class="text-medium text-align-center margin-bottom">Daily active visitors data</div>
+          </div>
+        </div><div data-w-id="f801b824-a9f9-08da-93b8-3868019969a9" class="w-slide" style="transform: translateX(0px); opacity: 1;">
+          <div class="c-carousel3__content">
+            <%= image_tag("Polar-Chart-Octagon.png", 
+                srcset: {"Polar-Chart-Octagon-p-500.png" => "500w", 
+                "Polar-Chart-Octagon-p-800.png" => "800w", 
+                "Polar-Chart-Octagon.png" => "1051w"}, 
+
+                sizes:  "(max-width: 767px) 100vw, 90vw",
+                style: "opacity: 0.5;",
+                class: "c-carousel3_image",
+                width: "1000"
+            ) %>            
+            <div style="opacity: 0.5;" class="text-medium text-align-center margin-bottom">Campaign cost distribution</div>
+          </div>
+        </div></div>
+      <div class="w-slider-arrow-left" style="display: none;">
+        <div class="c-carousel3__left-arrow w-icon-slider-left"></div>
+      </div>
+      <div class="w-slider-arrow-right">
+        <div class="c-carousel3__right-arrow w-icon-slider-right"></div>
+      </div>
+      <div class="c-carousel3_nav w-slider-nav w-slider-nav-invert w-round"><div class="w-slider-dot w-active" data-wf-ignore=""></div><div class="w-slider-dot" data-wf-ignore=""></div><div class="w-slider-dot" data-wf-ignore=""></div><div class="w-slider-dot" data-wf-ignore=""></div></div>
+    </div>
+  </div>
+  <div class="section no-padding-top">
+    <div class="container flex-horizontal">
+      <div class="col lg-3 md-12">
+        <div class="c-iconbox1">
+          <div>
+            <%= image_tag("Group-5.svg", class: "margin-bottom", width: "128")%>
+            <h4>Advanced Submission Form</h4>
+          </div>
+          <div class="margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div><a href="#" class="cta-link text-align-center">Learn&nbsp;more <span class="fa margin-left-small"></span></a></div>
+      </div>
+      <div class="col lg-3 md-12">
+        <div class="c-iconbox1">
+          <div>
+            <%= image_tag("Group-4.svg", class: "margin-bottom", width: "128")%>
+            <h4>Collaboration Kanban</h4>
+          </div>
+          <div class="margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div><a href="#" class="cta-link text-align-center">Learn&nbsp;more <span class="fa margin-left-small"></span></a></div>
+      </div>
+      <div class="col lg-3 md-12">
+        <div class="c-iconbox1">
+          <div>
+            <%= image_tag("Group-3.svg", class: "margin-bottom", width: "128")%>
+
+            <h4>Smart calendar sheduler</h4>
+          </div>
+          <div class="margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div><a href="#" class="cta-link text-align-center">Learn&nbsp;more <span class="fa margin-left-small"></span></a></div>
+      </div>
+      <div class="col lg-3 md-12">
+        <div class="c-iconbox1">
+          <div><%= image_tag("Group-2.svg", class: "margin-bottom", width: "128")%>
+            <h4>Customer journey activation</h4>
+          </div>
+          <div class="margin-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div><a href="#" class="cta-link text-align-center">Learn&nbsp;more <span class="fa margin-left-small"></span></a></div>
+      </div>
+    </div>
+  </div>
+  <div class="section bg-accent position-relative overflow-hidden">
+    <div class="container position-relative">
+      <div class="col order-first lg-5 md-12">
+        <%= image_tag("slice5.svg")%>
+      </div>
+      <div class="col lg-7 md-12">
+        <h2 class="margin-bottom-double">Learn how Zain makes finding, scheduling, managing, and reporting on social media easier</h2>
+        <div class="container container-nested is-wrapped">
+          <div class="col lg-6 md-12">
+            <!-- tow.svg -->
+            <%= image_tag("two.svg", class: "margin-bottom margin-left",  width: "128")%>
+            <div class="flex-horizontal">
+              <div class="text-large margin-right-small">01.</div>
+              <div>Keep your social presence active 24/7 by automatically scheduling hundreds of social media posts at once.</div>
+            </div>
+          </div>
+          <div class="col lg-6 md-12">
+            <!-- four -->
+            <%= image_tag("four.svg", class: "margin-bottom margin-left",  width: "128")%>
+            <div class="flex-horizontal">
+              <div class="text-large margin-right-small">02.</div>
+              <div>Stay on message with pre-approved content your teams can post, stored in your favorite cloud file service.</div>
+            </div>
+          </div>
+          <div class="col lg-6 md-12 no-margin-bottom-lg">
+            <!-- one -->
+            <%= image_tag("one.svg", class: "margin-bottom margin-left",  width: "128")%>
+            <div class="flex-horizontal">
+              <div class="text-large margin-right-small">03.</div>
+              <div>Track your performance and share meaningful insights with your team about customers and campaign.</div>
+            </div>
+          </div>
+          <div class="col lg-6 md-12 no-margin-bottom">
+            <%= image_tag("three.svg", class: "margin-bottom margin-left",  width: "128")%>
+            <div class="flex-horizontal">
+              <div class="text-large margin-right-small">04.</div>
+              <div>Find and filter social conversations by keyword, hashtag, and location—in multiple languages.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= image_tag("graphic10.svg", 
+        data: {id: "9887b634-6f6c-72fe-b845-81d3483659f8"},
+        class: "bg-decor2",  
+         style: "will-change: transform; transform: translate3d(0px, -291px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;")%>
+    <%= image_tag("graphic6.svg", 
+        data: {id: "d7972361-6fdb-0a27-e36d-3a666cf88333"},
+        class: "bg-decor4",  
+         style: "will-change: transform; transform: translate3d(0px, 317px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;")%>
+         <!-- graphic6low -->
+  </div>
+  <div class="section position-relative no-padding-bottom">
+    <div class="container flexh-justify-center position-relative">
+      <div class="col lg-8 md-12">
+        <div data-duration-in="300" data-duration-out="100" class="c-testimonial3 w-tabs">
+          <div class="c-testimonial3__tab-content w-tab-content">
+            <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
+              <div class="quote margin-bottom-double style4">Once again, I'm a satisfied customer. Great quality products that grant great quality results. Keep it up, team!</div>
+            </div>
+            <div data-w-tab="Tab 2" class="w-tab-pane">
+              <div class="quote margin-bottom-double style4">Everything works smoothly even without buyer protection never had any troubles with used codes</div>
+            </div>
+            <div data-w-tab="Tab 3" class="w-tab-pane">
+              <div class="quote margin-bottom-double style4">The support team was very responsive to some glitches. Wonderful experience. Thanks!</div>
+            </div>
+          </div>
+          <div class="c-testimonial3__tab w-tab-menu">
+            <a data-w-tab="Tab 1" class="c-testimonial3__tab-link w-inline-block w-tab-link w--current">
+              <div class="c-testimonial3__info">
+                <%= image_tag("portrait6.png", 
+                  class: "lg-margin-right md-margin-bottom-small rounded-pic", 
+                  width:"50")%>
+                <div class="c-testimonial1__text">
+                  <div class="is-bold">Miyagi Turbo</div>
+                  <div class="text-small low-text-contrast">Karate Master</div>
+                </div>
+              </div>
+            </a>
+            <a data-w-tab="Tab 2" class="c-testimonial3__tab-link w-inline-block w-tab-link">
+              <div class="c-testimonial3__info">
+                <%= image_tag("portrait5.png", 
+                  class: "lg-margin-right md-margin-bottom-small rounded-pic", 
+                  width:"50")%>
+                <div class="c-testimonial1__text">
+                  <div class="is-bold">Shinichi Kudo</div>
+                  <div class="text-small low-text-contrast">Kid Detective</div>
+                </div>
+              </div>
+            </a>
+            <a data-w-tab="Tab 3" class="c-testimonial3__tab-link w-inline-block w-tab-link">
+              <div class="c-testimonial3__info">
+
+                <%= image_tag("portrait3.png", 
+                  class: "lg-margin-right md-margin-bottom-small rounded-pic", 
+                  width:"50")%>
+
+                <div class="c-testimonial1__text">
+                  <div class="is-bold">Nobita Nobi</div>
+                  <div class="text-small low-text-contrast">Lazy ass boy</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="quote-mark">“</div>
+    </div>
+                <%= image_tag("memphis4.svg", 
+                  class: "bg-decor3")%>
+                <%= image_tag("memphis3.svg", 
+                  class: "bg-decor5")%>
+
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="col lg-12 text-align-center">
+        <div class="pre-title">Latest news</div>
+        <h2>From our blog</h2>
+      </div>
+    </div>
+    <div class="container flex-horizontal bg-white">
+      <div class="col lg-6 md-12">
+                <%= image_tag("Screen-Shot-2019-08-22-at-16.23.07.JPG", 
+                  srcset: {"Screen-Shot-2019-08-22-at-16.23.07-p-500.jpeg" => "500w","Screen-Shot-2019-08-22-at-16.23.07.JPG" => "1082w"},
+                  class: "margin-bottom-double")%>
+        <div class="flex-horizontal">
+          <h3 class="margin-bottom-small">5 Bad Habits of Absolutely Ineffective Technology Managers</h3>
+          <div class="low-text-contrast text-small basis-250px text-align-right">10 June 2019</div>
+        </div>
+        <div class="margin-bottom">Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</div><a href="#" class="cta-link text-align-center">Read more<span class="fa margin-left-small"></span></a></div>
+      <div class="col lg-6 md-12">
+                <%= image_tag("Screen-Shot-2019-08-22-at-16.27.22.JPG", 
+                  srcset: {"Screen-Shot-2019-08-22-at-16.27.22-p-500.jpeg" => "500w", "Screen-Shot-2019-08-22-at-16.27.22-p-800.jpeg" => "800w", 
+                  "Screen-Shot-2019-08-22-at-16.27.22.JPG" => "1078w"},
+                  class: "margin-bottom-double",
+                  width: "555")%>
+        <div class="flex-horizontal">
+          <h3 class="margin-bottom-small">Why hyper-growth can be a huge detriment to the success of your startup</h3>
+          <div class="low-text-contrast text-small basis-250px text-align-right">1 June 2019</div>
+        </div>
+        <div class="margin-bottom">Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</div><a href="#" class="cta-link text-align-center">Read more<span class="fa margin-left-small"></span></a></div>
+    </div>
+  </div>
+  <div class="section no-padding-top is-overlapping-bottom">
+    <div class="container">
+      <div class="col lg-12">
+        <div class="c-cta1 is-bg-color-primary">
+          <div class="md-margin-bottom on-dark">
+            <div class="size-h3">Ready to improve your social presence?</div>
+            <div>Free trial for 14 days. No credit card required.</div>
+          </div>
+          <div>
+            <a href="#" class="button-primary is-dark margin-right md-margin-bottom w-inline-block">
+              <div class="button-primary-text">try zain for free</div>
+            </a>
+            <a href="#" class="button-primary button-ghost-on-dark w-inline-block">
+              <div class="button-primary-text">request a demo</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-footer-dark padding-bottom-16">
+    <div class="container margin-bottom">
+      <div class="col lg-2 md-12 md-order-first">
+        <%= image_tag("light-zain.svg") %>
+      </div>
+      <div class="col lg-6 md-12 no-margin-bottom">
+        <div class="container container-nested">
+          <div class="col lg-4 md-12">
+            <h4>Products</h4><a href="#" class="footer-nav-link on-dark">Features</a><a href="#" class="footer-nav-link on-dark">Pricing</a><a href="#" class="footer-nav-link on-dark">FAQ</a><a href="#" class="footer-nav-link on-dark">Technical Support</a></div>
+          <div class="col lg-4 md-12">
+            <h4>Company</h4><a href="#" class="footer-nav-link on-dark">About us</a><a href="#" class="footer-nav-link on-dark">Our team</a><a href="#" class="footer-nav-link on-dark">Career</a><a href="#" class="footer-nav-link on-dark">Become investor</a></div>
+          <div class="col lg-4 md-12 no-margin-bottom">
+            <h4>Let's connect</h4><a href="#" class="footer-nav-link on-dark">Instagram</a><a href="#" class="footer-nav-link on-dark">Facebook</a><a href="#" class="footer-nav-link on-dark">Twitter</a><a href="#" class="footer-nav-link on-dark">Youtube</a></div>
+        </div>
+      </div>
+      <div class="col lg-4 md-12 no-margin-bottom">
+        <h4 class="margin-bottom">Subscribe</h4>
+        <div class="margin-bottom w-form">
+          <form id="email-form" name="email-form" data-name="Email Form" class="flexh-align-center"><input type="email" class="form-input-text is-grey margin-right-small no-margin-bottom w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="Enter your email address" id="email-2" required=""><input type="submit" value="Subscribe" data-wait="Please wait..." class="button-primary button-primary-small w-button"></form>
+          <div class="w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form.</div>
+          </div>
+        </div>
+        <div class="margin-bottom low-text-contrast text-small">Join our newsletter to stay up to date on features and releases</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col lg-12 margin-bottom">
+        <div class="hr"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col lg-6 no-margin-bottom md-12 md-order-last">
+        <div class="low-text-contrast text-small flexh-space-between md-flex-vertical">
+          <div class="md-order-last">©2019 Zain Media. All rights reserved. </div><a href="#" class="footer-bottom-link on-dark">Privacy Policy</a><a href="#" class="footer-bottom-link on-dark">Term Of Service</a></div>
+      </div>
+      <div class="col lg-6 no-margin-bottom md-12">
+        <div class="w100 text-align-right footer-bottom md-text-align-left margin-bottom">Made in Surabaja, Indonesia</div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script>
+    var Webflow = Webflow || [];
+    Webflow.push(function () {
+      // DOMready has fired
+      // May now use jQuery and Webflow api
+// start everything
+      var tabTimeout;
+      clearTimeout(tabTimeout);
+      tabLoop();
+    // define loop - cycle through all tabs
+    function tabLoop() {
+        tabTimeout = setTimeout(function() {
+            var $next = $('.c-tabslider1__tab-menu').children('.w--current:first').next();
+            if($next.length) {
+                $next.click();  // click resets timeout, so no need for interval
+            } else {
+                $('.c-tabslider1__tab-link:first').click();
+            }
+        }, 3500);  // 2 second tab loop
+    }
+    // reset timeout if a tab is clicked
+    $('.c-tabslider1__tab-link').click(function() {
+        clearTimeout(tabTimeout);
+        tabLoop();
+        });
+    });
+</script>
+
