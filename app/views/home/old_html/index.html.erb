@@ -1,0 +1,70 @@
+<h1>Let’s build something that your audience will love.</h1>
+
+	
+<style>
+	.promos {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr;
+		grid-template-rows: minmax(30vh, 1fr);
+		grid-gap: 1rem;
+		grid-template-areas: 	"main second second"
+								"main third  fourth";
+	}
+	.promo:first-child {
+		grid-area: main;
+		background-color: green;
+		.item {
+			background-color: purple;
+		}
+	}
+	.promo:nth-child(2) {
+		grid-area: second;
+		background-color: blue;
+	}
+	.promo:nth-child(3) {
+		grid-area: third;
+		background-color: orange;
+	}
+	.promo:nth-child(4) {
+		grid-area: fourth;
+		background-color: black;
+	}
+</style>
+
+<section class="promos">
+	<div class="promo">
+	    <div class="item">
+	    	
+			<div style="padding: 60px">
+					<%= render partial: 'logo' %>
+				<p >Dice Media Group is the Salt Lake based web design company specializing in custom web design and development, e-commerce websites, email newsletter design, campaign implementation and brand &amp; identity design.</p>
+			</div>
+	
+	    </div>
+	</div>
+	<div class="promo">
+	    <div class="item">
+			<p>
+			    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat natus error cumque minus officia quae! Nostrum repellendus ducimus, qui itaque assumenda modi eaque rerum fugit optio consequatur aut illum alias amet consequuntur odio distinctio laborum omnis expedita ipsa repudiandae eveniet magni laudantium voluptatibus. Odit!
+			</p>
+	
+	    </div>
+	</div>
+	<div class="promo">
+	    <div class="item">
+	    	  <i class="fas fa-file-code fa-10x"></i>
+	    </div>
+	    <div class="item">
+	    	  <p>Build</p>
+	    </div>
+	</div>
+	<div class="promo">
+	    <div class="item">
+	    	  <i class="fas fa-bullhorn  fa-10x"></i>	    	
+	    </div>
+	    <div class="item">
+	    	  <p>Promote</p>
+	    </div>
+	</div>
+</section>
+    
