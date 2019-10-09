@@ -7,13 +7,29 @@
           </div>
           <div class="col lg-4 no-margin-bottom flexh-justify-center col-logo no-padding-left md-3"><a href="index.html" class="brand w-nav-brand w--current"><img src="images/dark-zain.svg" width="64" alt="" class="logo-image"></a></div>
           <div class="col lg-4 no-margin-bottom flexh-justify-end no-padding-right hidden-xs md-8">
-            <a href="form-2.html" class="button-primary button-primary-small order-last w-inline-block">
-              <div class="button-primary-text">sign up</div>
-            </a>
-            <div class="extra-menu"><a href="form-3.html" class="extra-menu-link margin-left nav-link">Sign in</a></div>
+
+            <% if user_signed_in? %>
+              <div class="extra-menu">
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "extra-menu-link margin-left nav-link" %>
+              </div>
+
+
+            <% else %>
+            MONEY
+                            <!--  -->
+              <%#= link_to new_user_registration_path, class: "button-primary button-primary-small order-last w-inline-block" do %>
+                  <!-- <div class="button-primary-text">sign up</div> -->
+              <%# end -%>
+
+            <!--  -->
+            <% end %>
+
+
           </div>
           <div class="menu-button w-nav-button"><img src="images/burger-menu-icon-1.svg" width="22" alt="" class="burger-menu-icon"></div>
         </div>
       </div>
     </div>
   </div>
+
+<!--  -->

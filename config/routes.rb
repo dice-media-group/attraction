@@ -25,8 +25,8 @@ Rails.application.routes.draw do
   get '/pricing',   to: 'home#pricing'
   get '/blog',      to: 'home#blog'
   get '/contact',   to: 'home#contact'
-  get '/form_2',    to: 'home#form_2'
-  get '/form_3',    to: 'home#form3'
+  get '/form-2',    to: 'home#form_2'
+  get '/form-3',    to: 'home#form_3'
 
   authenticate :user, lambda { |u| u.admin? } do
     mount Sidekiq::Web => '/sidekiq'
