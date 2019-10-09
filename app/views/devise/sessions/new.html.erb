@@ -1,37 +1,3 @@
-<div class="row">
-  <div class="col-lg-4 col-md-6 ml-auto mr-auto">
-    <h1 class="text-center">Log in</h1>
-
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="form-group">
-        <%= f.email_field :email, autofocus: true, placeholder: 'Email Address', class: 'form-control' %>
-      </div>
-
-      <div class="form-group">
-        <%= f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control' %>
-      </div>
-
-      <% if devise_mapping.rememberable? -%>
-        <div class="form-check">
-          <label class="form-check-label">
-            <%= f.check_box :remember_me, class: "form-check-input" %>
-            Remember me
-          </label>
-        </div>
-      <% end -%>
-
-      <div class="form-group">
-        <%= f.submit "Log in", class: "btn btn-primary btn-block btn-lg" %>
-      </div>
-    <% end %>
-
-    <div class="text-center">
-      <%= render "devise/shared/links" %>
-    </div>
-  </div>
-</div>
-
-<!--  -->
 <body class="bg-color">
 
   <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Merriweather:300,300italic,400,400italic,700,700italic,900,900italic","Gothic A1:100,200,300,regular,500,600,700,800,900"]  }});</script>
@@ -47,7 +13,13 @@
               <%= image_tag "dark-zain.svg" %>
             </a>
           </div>
-          <div class="col lg-6 w-clearfix"><a href="form-2.html" class="float-right">Sign Up</a></div>
+          <div class="col lg-6 w-clearfix">
+            <%= link_to(new_user_registration_path, 
+                class: "float-right")  do  %>
+                Sign Up
+            <% end -%>
+
+          </div>
         </div>
         <div class="alignself-center">
           <h2>Welcome back</h2>
@@ -77,9 +49,10 @@
                   maxlength: "256" %>
 
               <label class="w-checkbox">
-                <input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" class="w-checkbox-input form-checkbox">
-                <span class="margin-bottom w-form-label">remember my session</span>
+                <span class="margin-bottom w-form-label"><%= f.check_box :remember_me, class: "w-checkbox-input form-checkbox" %>
+                Remember me</span>
               </label>
+
               <input type="submit" value="Login" data-wait="Please wait..." class="button-primary w-button">
             <% end -%>
 
