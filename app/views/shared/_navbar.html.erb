@@ -1,35 +1,41 @@
-  <div class="section-header position-absolute">
-    <div class="container space-between align-middle">
-      <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
-        <div class="navbar-container align-middle w-container">
-          <div class="col lg-4 order-first no-padding-left no-margin-bottom flex-horizontal position-absolute-md">
-            <nav role="navigation" class="nav-menu w-nav-menu"><a href="about-us.html" class="no-padding-left nav-link w-nav-link">About</a><a href="pricing.html" class="nav-link w-nav-link">Pricing</a><a href="blog.html" class="nav-link w-nav-link">Blog</a><a href="contact.html" class="nav-link w-nav-link">Contact</a></nav>
-          </div>
-          <div class="col lg-4 no-margin-bottom flexh-justify-center col-logo no-padding-left md-3"><a href="index.html" class="brand w-nav-brand w--current"><img src="images/dark-zain.svg" width="64" alt="" class="logo-image"></a></div>
-          <div class="col lg-4 no-margin-bottom flexh-justify-end no-padding-right hidden-xs md-8">
-
+  <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
+    <div class="navbar-container align-middle w-container">
+      <div class="col lg-4 order-first no-padding-left no-margin-bottom flex-horizontal position-absolute-md">
+        <nav role="navigation" class="nav-menu w-nav-menu">
+          <a href="about-us.html" class="no-padding-left nav-link w-nav-link" style="max-width: 100%;">About</a>
+          <a href="/pricing" class="nav-link w-nav-link" style="max-width: 100%;">Pricing</a>
+          <a href="/blog.html" class="nav-link w-nav-link" style="max-width: 100%;">Blog</a>
+          <a href="/contact.html" class="nav-link w-nav-link" style="max-width: 100%;">Contact</a>
+        </nav>
+      </div>
+      <div class="col lg-4 no-margin-bottom flexh-justify-center col-logo no-padding-left md-3">
+        <a href="/index.html" class="brand w-nav-brand w--current">
+          <%= image_tag "dark-zain.svg", class: "logo-image", width: "64" %>
+        </a>
+      </div>
+      <div class="col lg-4 no-margin-bottom flexh-justify-end no-padding-right hidden-xs md-8">
             <% if user_signed_in? %>
               <div class="extra-menu">
                 <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "extra-menu-link margin-left nav-link" %>
               </div>
-
-
             <% else %>
-            MONEY
-                            <!--  -->
-              <%#= link_to new_user_registration_path, class: "button-primary button-primary-small order-last w-inline-block" do %>
-                  <!-- <div class="button-primary-text">sign up</div> -->
-              <%# end -%>
-
-            <!--  -->
+              <%= link_to(new_user_registration_path, 
+                class: "button-primary button-primary-small order-last w-inline-block")  do  %>
+                <div class="button-primary-text">sign up</div>
+              <% end -%>
+<!--         <a href="form-2.html" class="button-primary button-primary-small order-last w-inline-block">
+          <div class="button-primary-text">sign up</div>
+        </a> -->
+              <div class="extra-menu">
+                <%= link_to "Sign in", new_user_session_path, class: "extra-menu-link margin-left nav-link" %>
+              </div>
             <% end %>
-
-
-          </div>
-          <div class="menu-button w-nav-button"><img src="images/burger-menu-icon-1.svg" width="22" alt="" class="burger-menu-icon"></div>
-        </div>
+      </div>
+      <div class="menu-button w-nav-button">
+        <%= image_tag "burger-menu-icon-1.svg", class: "burger-menu-icon", width: "22" %>
       </div>
     </div>
-  </div>
+  <div class="w-nav-overlay" data-wf-ignore=""></div>
+</div>
 
 <!--  -->
