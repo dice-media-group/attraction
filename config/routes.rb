@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   get '/contact',   to: 'home#contact'
   get '/form-2',    to: 'home#form_2'
   get '/form-3',    to: 'home#form_3'
+  get '/single-article',    to: 'home#single_article'
   get '/single_article',    to: 'home#single_article'
 
   authenticate :user, lambda { |u| u.admin? } do
