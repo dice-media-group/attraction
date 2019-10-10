@@ -5,11 +5,19 @@
   </head>
 
   <body>
-    <div class="section-header position-absolute">
-      <div class="container space-between align-middle">      
-          <%= render partial: 'shared/navbar' %>
+    <!-- navigation -->
+
+    <% if current_page?(controller: 'devise/sessions', action: 'new') %>
+      <div class="section-header position-absolute" style="visibility: hidden;">
+    <% elsif current_page?(controller: 'devise/registrations', action: 'new') %>
+    <% else %>
+      <div class="section-header position-absolute">      
+    <% end -%>
+    
+        <div class="container space-between align-middle">      
+            <%= render partial: 'shared/navbar' %>
+        </div>
       </div>
-    </div>
     <%#= render 'shared/notices' %>
 
 <!--     <div class="container">
