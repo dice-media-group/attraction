@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com  -->
+<!--  Last Published: Sat Aug 24 2019 00:23:18 GMT+0000 (UTC)  -->
+<html data-wf-page="5d5f61feef7f207832842b41" data-wf-site="5d5e0eb876620148fbf5e7d9">
+<head>
+      <%= render 'home/pricing/pricing_head' %>
+</head>
+<body>
+  <%= render partial: 'home/pricing/hero' %>
+
+  <div class="section-header position-absolute">
+    <div class="container space-between align-middle">
+            <%= render partial: 'shared/navbar' %>
+
+    </div>
+  </div>
+
+  <div class="section has-decoration">
+    <div class="container">
+      <%= render partial: 'home/pricing/pricing_table' %>
+    </div>
+  </div>
+  
+  <div class="section bg-accent">
+    <div class="container">
+      <%= render partial: 'home/pricing/features' %>
+      <div class="col lg-1 no-margin-bottom"></div>
+      <%= render partial: 'home/pricing/faq' %>
+    </div>
+  </div>
+
+    <%= render 'shared/footer' %>
+    <%= render 'shared/javascript' %>
+
+
+</body>
+</html>

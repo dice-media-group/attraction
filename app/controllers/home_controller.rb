@@ -24,6 +24,7 @@ class HomeController < ApplicationController
   end
 
   def pricing  	
+        render :layout => false
   end
 
   def single_article
